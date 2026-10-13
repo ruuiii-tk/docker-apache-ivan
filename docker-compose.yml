@@ -1,0 +1,9 @@
+services:
+  apache-servidor:
+    build: .
+    container_name: servidor_apache_ivan
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html
+    restart: unless-stopped
